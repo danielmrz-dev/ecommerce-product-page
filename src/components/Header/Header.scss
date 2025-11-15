@@ -1,0 +1,12 @@
+.header {
+  padding: 19px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  &__icon {
+    &:nth-child(1) {
+      transform: translateY(2px);
+      cursor: pointer;
+    }
+  }
+}
