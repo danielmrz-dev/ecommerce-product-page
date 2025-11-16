@@ -7,6 +7,8 @@ import {
   Drawer,
 } from "@mui/material";
 import React from "react";
+import "./Sidenav.scss";
+import closeIcon from "../../assets/images/icon-close.svg";
 
 const menuOptions = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -21,12 +23,12 @@ export const Sidenav: React.FC<SidenavProps> = ({ open, setOpen }) => {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="alert" onClick={toggleDrawer(false)}>
+    <Box className="links" sx={{ width: 250 }} role="alert" onClick={toggleDrawer(false)}>
       <List>
         {menuOptions.map((text) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <ListItemText className="links__list-item" primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -34,7 +36,8 @@ export const Sidenav: React.FC<SidenavProps> = ({ open, setOpen }) => {
     </Box>
   );
   return (
-    <Drawer open={open} onClose={toggleDrawer(false)}>
+    <Drawer className="drawer" open={open} onClose={toggleDrawer(false)}>
+      <img src={closeIcon} alt="" onClick={toggleDrawer(false)} />
       {DrawerList}
     </Drawer>
   );

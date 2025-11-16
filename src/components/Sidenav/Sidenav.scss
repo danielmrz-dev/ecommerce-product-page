@@ -1,0 +1,19 @@
+@use "../../index.scss";
+
+.links {
+  padding: 1rem 0 0 0;
+  span {
+    transform: translateX(1rem);
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 800;
+  }
+}
+
+.drawer {
+  img {
+    padding: .2rem;
+    margin: 1.25rem 1.75rem 2rem;
+    max-width: 20px;
+    cursor: pointer;
+  }
+}
